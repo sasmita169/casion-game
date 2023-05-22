@@ -10,13 +10,13 @@ void instructions() {
     system("cls");
     cout << endl << endl;
     cout << " ----------------------------------------------------------------------------" << endl;
-    cout << " RULES OF THE GAME" << endl;
+    cout << " **RULES OF THE GAME**" << endl;
     cout << " ----------------------------------------------------------------------------" << endl;
-    cout << " 1. Choose any number between 1 to 5" << endl;
+    cout << " 1. Choose any number between 1 to 10" << endl;
     cout << " 2. If you win you will get 5 times of money you bet" << endl;
     cout << " 3. If you bet on wrong number you will lose your betting total Money" << endl;
     cout << " ----------------------------------------------------------------------------" << endl;
-    cout << "Press any key to start...";
+    cout << "Press any key to start *****";
     getch();
 }
 
@@ -35,7 +35,9 @@ void play() {
     srand(time(0));
 
     cout << " -------------------------------------" << endl;
-    cout << "|           CASINO GAME             |" << endl;
+    cout << " -------------------------------------" << endl;
+    cout << "||          CASINO GAME             ||" << endl;
+    cout << " -------------------------------------" << endl;
     cout << " -------------------------------------" << endl << endl;
 
     cout << "Enter Your Name : ";
@@ -47,12 +49,13 @@ void play() {
 
     do {
         system("cls");
-        
-	    cout << " -------------------------------------" << endl;
-	    cout << "|           CASINO GAME             |" << endl;
-	    cout << " -------------------------------------" << endl << endl<<endl;
-        
-		cout << "\nCurrent balance is $ " << totalMoney << endl;
+       
+    cout << " -------------------------------------" << endl;
+    cout << " -------------------------------------" << endl;
+    cout << "||          CASINO GAME             ||" << endl;
+    cout << " -------------------------------------" << endl;
+    cout << " -------------------------------------" << endl << endl;
+	cout << "\nCurrent balance is $ " << totalMoney << endl;
 
         do {
             cout << personName << "  Please Enter amount to bet : $";
@@ -63,14 +66,14 @@ void play() {
         } while (betMoney > totalMoney);
 
         do {
-            cout << "  Enter Guess number to bet between 1 to 5 :";
+            cout << "  Enter Guess number to bet between 1 to 10 :";
             cin >> guess;
-            if (guess < 1 || guess > 5)
-                cout << "Number should be between 1 to 5" << endl << "Re-enter data " << endl;
+            if (guess < 1 || guess > 10)
+                cout << "Number should be between 1 to 10" << endl << "Re-enter data " << endl;
 
-        } while (guess < 1 || guess > 5);
+        } while (guess < 1 || guess > 10);
 
-        dice = rand() % 5 + 1;
+        dice = rand() % 10 + 1;
 
         if (dice != guess) {
             totalMoney -= betMoney;
@@ -101,9 +104,11 @@ int main() {
 
     do {
         system("cls");
-        cout << " -------------------------- " << endl;
-        cout << " |    CASINO NO GUESS     | " << endl;
-        cout << " --------------------------" << endl << endl;
+        cout << " -------------------------------------" << endl;
+        cout << " -------------------------------------" << endl;
+        cout << "||          CASINO GAME             ||" << endl;
+        cout << " -------------------------------------" << endl;
+        cout << " -------------------------------------" << endl << endl;
         cout << "1. Start Game" << endl;
         cout << "2. Rules" << endl;
         cout << "3. Quit" << endl;
